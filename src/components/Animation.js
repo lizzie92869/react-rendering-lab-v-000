@@ -25,6 +25,13 @@ class Animation extends React.Component {
       );
   };
 
+  componentWillUpdate = (nextProps, nextState) => {
+    // console.log(`this.props`, this.state)
+    // console.log(`nextState`, nextState)
+    // showLoadingBar()
+    (nextState !== this.state) ? this.showLoadingBar() : null 
+  }
+
   showLoadingBar = () => {
     const progressBar = document.getElementById("progress-bar");
     progressBar.className = "off on";

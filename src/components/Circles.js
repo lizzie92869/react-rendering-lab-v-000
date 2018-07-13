@@ -15,6 +15,7 @@ class Circles extends React.Component {
     };
   }
 
+
   handleClick = () => {
     const newCircles = this.state.circles.map(circle => {
       if (circle.color === 'red') return { color: 'green' };
@@ -24,6 +25,8 @@ class Circles extends React.Component {
     console.log("\n💥 Red and green were swapped!");
     this.setState({ circles: newCircles });
   }
+
+
 
   render() {
     const renderCircles = this.state.circles.map((circle, index) => 
